@@ -16,15 +16,19 @@ Park.prototype.remove = function (dino) {
 };
 
 Park.prototype.findFamousDino = function () {
+  // for (var dinosaur of this.dinosaurs){
+  var num =  Math.max(this.dinosaurs.guestsAttractedPerDay)
+  console.log(num)
+  }
+
   // var array = []
   // for (dinosaurs of this.dinosaurs){
   //   array.push(dinosaurs.guestsAttractedPerDay)
   // }
-  console.log(Math.max(...this.dinosaurs['guestsAttractedPerDay']));
-};
+  // console.log(Math.max(...this.dinosaurs['guestsAttractedPerDay']));
 
 Park.prototype.removeBySpecies = function (species) {
-  
+
 };
 
 module.exports = Park;
