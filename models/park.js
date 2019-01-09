@@ -27,8 +27,21 @@ Park.prototype.findFamousDino = function () {
   // }
   // console.log(Math.max(...this.dinosaurs['guestsAttractedPerDay']));
 
-Park.prototype.removeBySpecies = function (species) {
+  Park.prototype.findBySpecies = function (spec) {
+    const found = []
 
-};
+    for (const dinosaur of this.dinosaurs){
+      if (dinosaur.species === spec)
+      found.push(dinosaur)
+    }
+    return found 
+  };
+
+
+
+
+// Park.prototype.removeBySpecies = function (species) {
+//
+// };
 
 module.exports = Park;

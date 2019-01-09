@@ -8,6 +8,8 @@ describe('Park', function() {
   let dinosaur
   let dinosaur2
 
+  let dinoland 
+
   beforeEach(function () {
     dinoland = new Park ("Dinoland", 10)
 
@@ -44,13 +46,17 @@ describe('Park', function() {
     assert.strictEqual(dinoland.dinosaurs.length, 1)
   });
 
-  it('should be able to find the dinosaur that attracts the most visitors', function(){
+  xit('should be able to find the dinosaur that attracts the most visitors', function(){
     dinoland.add(dinosaur)
     dinoland.add(dinosaur2)
     assert.strictEqual(dinoland.findFamousDino(), dinosaur)
   });
 
-  xit('should be able to find all dinosaurs of a particular species');
+  it('should be able to find all dinosaurs of a particular species', function(){
+    dinoland.add(dinosaur)
+    dinoland.add(dinosaur2)
+    assert.deepStrictEqual(dinoland.findBySpecies('sterodaptil'),[dinosaur2])
+  });
 
   xit('should be able to remove all dinosaurs of a particular species', function(){
     dinoland.add(dinosaur)
